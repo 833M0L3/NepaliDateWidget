@@ -73,12 +73,8 @@ namespace OpenNetMeter.Views
                 balloonShow = false;
                 trayIcon.Icon = Properties.Resources.AppIcon;
                 trayIcon.Visible = true;
-                trayIcon.DoubleClick += Ni_DoubleClick;
-                trayIcon.MouseClick += Ni_MouseClick;
-                cm.Items.Add("Reset all window positions", null, ResetWinPos_Click);
-                cm.Items.Add("Show Mini Widget", null, MiniWidget_Show_Click);
-                cm.Items.Add(new Forms.ToolStripSeparator());
-                cm.Items.Add("Open", null, Cm_Open_Click);
+                trayIcon.DoubleClick += MiniWidget_Show_Click;
+                cm.Items.Add("Show Calendar", null, MiniWidget_Show_Click);
                 cm.Items.Add("Exit", null, Cm_Exit_Click);
                 trayIcon.ContextMenuStrip = cm;
 
@@ -246,7 +242,7 @@ namespace OpenNetMeter.Views
         {
             if (!balloonShow && trayIcon != null)
             {
-                trayIcon.ShowBalloonTip(1000, null, "Minimized to system tray", Forms.ToolTipIcon.None);
+                //trayIcon.ShowBalloonTip(1000, null, "Minimized to system tray", Forms.ToolTipIcon.None);
                 balloonShow = true;
             }
             if(aboutWin != null)

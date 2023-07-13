@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Windows.Ink;
+
 namespace OpenNetMeter.Properties {
     
     
@@ -136,7 +138,8 @@ namespace OpenNetMeter.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool MiniWidgetVisibility {
             get {
-                return ((bool)(this["MiniWidgetVisibility"]));
+                //return ((bool)(this["MiniWidgetVisibility"]));
+                return true;
             }
             set {
                 this["MiniWidgetVisibility"] = value;
@@ -145,10 +148,11 @@ namespace OpenNetMeter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool MiniWidgetTransparent {
             get {
-                return ((bool)(this["MiniWidgetTransparent"]));
+                //return ((bool)(this["MiniWidgetTransparent"]));
+                return true;
             }
             set {
                 this["MiniWidgetTransparent"] = value;

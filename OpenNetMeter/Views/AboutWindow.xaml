@@ -30,11 +30,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" IsHitTestVisible="True" MouseLeftButtonDown="Grid_MouseDown" Style="{StaticResource BackgroundColor1}">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,8,0,8" >
-                    <Image Source="{Binding Source={x:Static res:Resources.x64}, Converter={StaticResource BitmapToImage}}" Height="64" Width="64" Margin="10,0"/>
-                    <TextBlock Text="OpenNetMeter" FontFamily="Segoe UI" FontWeight="Bold" 
-                    FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource FontColor3}"/>
-                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,8,0,8" />
             </Grid>
             <Button Width="50" Height="32" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Exit_Button_Click" >
                 <Button.Style>
@@ -68,28 +64,7 @@
                     </Grid>
                 </Button.Content>
             </Button>
-            <Grid Grid.Row="1" Style="{StaticResource BackgroundColor2}">
-
-                <Border Margin="8" Style="{StaticResource BorderStyle1}">
-                    <StackPanel Margin="8">
-                        <TextBlock Text="{StaticResource AppVersion}" Style="{StaticResource FontColor1}"/>
-                        <TextBlock  Style="{StaticResource FontColor1}">
-                            <LineBreak/>
-                            This product is created and maintained by Ashfaaq Riphque.
-                            <LineBreak/>
-                            <LineBreak/>
-                            If you find any problems with the product or any 
-                            <LineBreak/>
-                             ideas for improvements, feel free create an issue at,
-                            <LineBreak/>
-                            <Hyperlink NavigateUri="https://github.com/Ashfaaq18/OpenNetMeter" RequestNavigate="Hyperlink_RequestNavigate" Style="{StaticResource FontColor4}">
-                                https://github.com/Ashfaaq18/OpenNetMeter
-                            </Hyperlink>
-                        </TextBlock>
-                    </StackPanel>
-                </Border>
-                
-            </Grid>
+            <Grid Grid.Row="1" Style="{StaticResource BackgroundColor2}"/>
         </Grid>
     </Border>
 </Window>

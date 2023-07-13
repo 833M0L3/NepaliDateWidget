@@ -16,6 +16,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\00ed5819071101.562d48fd36e19.gif" />
+    <None Remove="Views\x32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ManagedNativeWifi" Version="2.1.0" />
     <PackageReference Include="Microsoft.Diagnostics.Tracing.TraceEvent" Version="3.0.0" />
     <PackageReference Include="ParallelExtensionsCore" Version="2.1.0" />
@@ -24,6 +29,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DatabaseEngine\DatabaseEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\00ed5819071101.562d48fd36e19.gif" />
+    <Resource Include="Views\x32.png" />
   </ItemGroup>
 
   <ItemGroup>

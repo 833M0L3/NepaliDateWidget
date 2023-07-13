@@ -11,7 +11,7 @@ namespace OpenNetMeter
         private void Application_Startup(object sender, StartupEventArgs e)
         {
 
-            bool startMinimized = false;
+            bool startMinimized = true;
             for (int i = 0; i != e.Args.Length; ++i)
             {
                 if (e.Args[i] == "/StartMinimized")

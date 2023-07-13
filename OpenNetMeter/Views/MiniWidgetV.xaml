@@ -15,41 +15,22 @@
         Width="{Binding Width, Mode=TwoWay}"
         Height="{Binding Height, Mode=TwoWay}"
         Background="#01000000"
-        ShowInTaskbar="False">
-    <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="0" GlassFrameThickness="1" CornerRadius="0" />
-    </WindowChrome.WindowChrome>
-    <Window.Resources>
-        <v:UnitConverterBytes x:Key="converterBytes"/>
-        <v:NetSpeedFormatConverter x:Key="netSpeedFormatConverter"/>
-    </Window.Resources>
+        ShowInTaskbar="False" d:DesignWidth="104.403">
 
-    <Border Style="{StaticResource BorderColor}">
-        <Grid Style="{StaticResource MiniWidgetBackgroundColor}" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ContextMenu>
-                <ContextMenu Style="{StaticResource miniWidgetContextMenuColor}">
-                    <MenuItem Header="Open" Click="MenuItem_Open_Click"/>
-                    <MenuItem Header="Hide" Click="MenuItem_Hide_Click"/>
-                </ContextMenu>
-            </Grid.ContextMenu>
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="5,2">
-                <TextBlock Padding="0" FontSize="12" Style="{StaticResource FontColor1}">D-S :</TextBlock>
-                <TextBlock Padding="5,0,0,0"  FontSize="12" Style="{StaticResource FontColor1}" Text="{Binding DownloadSpeed, Converter={StaticResource netSpeedFormatConverter}}" />
-                <TextBlock Padding="0" FontSize="12" Style="{StaticResource FontColor1}">ps</TextBlock>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="5,2">
-                <TextBlock Padding="0" FontSize="12" Style="{StaticResource FontColor1}">U-S :</TextBlock>
-                <TextBlock Padding="5,0,0,0" FontSize="12" Style="{StaticResource FontColor1}" Text="{Binding UploadSpeed, Converter={StaticResource netSpeedFormatConverter}}"/>
-                <TextBlock Padding="0" FontSize="12" Style="{StaticResource FontColor1}">ps</TextBlock>
-            </StackPanel>
-        </Grid>
-    </Border>
-    
+    <Grid Style="{StaticResource MiniWidgetBackgroundColor}">
+        <Grid.ContextMenu>
+            <ContextMenu Style="{StaticResource miniWidgetContextMenuColor}">
+                <MenuItem Header="Hide" Click="MenuItem_Hide_Click"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Adjust the column widths as needed -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17" Source="/Views/00ed5819071101.562d48fd36e19.gif" Margin="-3,-2,0,0"/>
+        <TextBlock Padding="0" FontSize="14" Style="{StaticResource FontColor1}" Text="{Binding NepaliDate}" Foreground="#FFF7F7F7" Grid.Column="2"/>
+
+    </Grid>
 </Window>
